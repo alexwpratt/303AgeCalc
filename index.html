@@ -1,0 +1,33 @@
+<!-- 
+HW7 - Age Calculator 
+Pratt, Alex Wilcken 
+gets the user's name and birthday and calculates their current age
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <h1>Welcome to the Age Calculator!</h1>
+</head>
+
+<body>
+    <script src="JavascriptFunctions.js"></script>
+
+    <p id="Answer"></p>
+
+    <!--gets the user's name and birthdate:-->
+    <script>
+        var sUserName = window.prompt("Please enter your full name", "First and Last Name");
+        var sBirthday = window.prompt("Please enter your birthday", "MM/DD/YYYY");
+        var dBirthday = new Date(sBirthday);
+        //console.log(sBirthday);
+        //console.log(dBirthday);
+
+
+        //outputs the user's information in the page
+        document.getElementById("Answer").innerHTML = sUserName + " is currently " + calculate_age(dBirthday) + " years old";
+    </script>
+
+</body>
+
+</html>
